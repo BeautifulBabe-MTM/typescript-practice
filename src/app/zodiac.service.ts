@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ZodiacService {
-  private apiUrl = 'https://aztro.sameerkumar.website';
+  private apiUrl = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
 
   constructor(private http: HttpClient) {}
 

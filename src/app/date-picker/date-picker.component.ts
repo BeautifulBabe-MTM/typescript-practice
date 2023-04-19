@@ -17,6 +17,10 @@ export class DatePickerComponent {
 
   constructor(private zodiacService: ZodiacService) {}
 
+  ngOnInit(): void {
+    this._birthdate = new Date();
+  }
+
   get birthdate(): Date {
     return this._birthdate;
   }
@@ -39,11 +43,7 @@ export class DatePickerComponent {
       }
     );
   }
-  public getZodiacSign1() {
-    this.zodiacService.getZodiacSign(this.sign, this.day).subscribe((data: any) => {
-      this._zodiacSign = data.sign;
-    });
-  }
+
   public getZodiacSign(day: string, month: string): string {
     const zodiacSigns = [
       { name: 'Capricorn', start: '01-01', end: '01-19' },
@@ -71,7 +71,6 @@ export class DatePickerComponent {
         return sign.name;
       }
     }
-  
-    return '';
+    return 'GOVNO';
   }
 }
