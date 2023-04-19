@@ -10,7 +10,7 @@ import { ZodiacService } from '../zodiac.service';
 export class DatePickerComponent {
 
   public _birthdate!: Date;
-  public _zodiacSign: string = "";
+  public _zodiacSign: string = "WILL BE HERE";
 
   public sign!: string;
   public day!: string;
